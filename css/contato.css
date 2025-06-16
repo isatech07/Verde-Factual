@@ -1,0 +1,203 @@
+/*----------- RESET -----------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*----------- VARIÁVEIS -----------*/
+:root {
+  /* Cores principais */
+  --Background: #D3D2D2;
+  --Primária: #224021;
+  --Verde-claro: #76C363;
+  --Verde-floresta: #337D1E;
+  --Verde-folha: #67AC56;
+  --Verde-mato: #1F5C23;
+  --Verde-lima: #61BE6F;
+  --Verde-musgo-claro: #85BC61;
+  --Azul-ceu: #91BED4;
+  --Azul-noite: #304269;
+
+  /* Cores de apoio */
+  --Preto: #000000;
+  --Branco: #FFFFFF;
+  --Sucess: #1BE071;
+  --Warning: #F47E08;
+  --Danger: #FF0000;
+  --Cinza-escuro: #616161;
+
+  /* Gradientes */
+  --gradiente-floresta: linear-gradient(to right, var(--Verde-mato), var(--Verde-lima));
+  --gradiente-nevoa-verde: linear-gradient(to bottom, var(--Background), var(--Verde-musgo-claro));
+  --gradiente-azul: linear-gradient(to bottom, var(--Azul-noite), var(--Azul-ceu));
+
+  /* Tipografia */
+  --ff-Montserrat: "Montserrat", sans-serif;
+  --ff-InstrumentSans: "Instrument Sans", sans-serif;
+  --ff-Megrim: "Megrim", system-ui;
+  --ff-MontaguSlab: "Montagu Slab", serif;
+
+  --fs-1: 3.6rem;
+  --fs-2: 2.4rem;
+  --fs-3: 2rem;
+  --fs-4: 1.7rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.5rem;
+  --fs-7: 1.4rem;
+  --fs-f8: 1.2rem;
+
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Espaçamento */
+  --section-spacing: 60px;
+
+  /* Bordas */
+  --radius-circle: 50%;
+  --radius-5: 5px;
+  --radius-3: 3px;
+
+  /* Sombras */
+  --shadow: 0px 2px 5px 0px hsla(0, 0%, 0%, 0.2);
+  --shadow-1: 0px 2px 20px hsla(209, 36%, 72%, 0.2);
+  --shadow-2: 0 4px 16px hsla(0, 0%, 0%, 0.06);
+
+  /* Transições */
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+  /* Clip-paths */
+  --clip-path-1: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-path-2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --clip-path-3: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-4: polygon(90% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+  --clip-path-5: polygon(100% 0, 100% 100%, 10% 100%, 0 60%, 0 0);
+  --clip-path-6: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+  --clip-path-7: polygon(100% 0, 100% 60%, 90% 100%, 0 100%, 0 0);
+  --clip-path-8: polygon(0% 0%, 70% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-9: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+
+/* === CONFIGURAÇÃO DE ROLAGEM === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--Branco);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Verde-floresta);
+}
+
+
+/*----------- GERAL -----------*/
+body {
+  font-family: var(--ff-Montserrat);
+  background: var(--gradiente-floresta);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----------- CONTAINER -----------*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/*----------- FORMULÁRIO -----------*/
+.form-box {
+  background-color: var(--Background);
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 400px;
+  box-shadow: var(--shadow-1);
+}
+
+.form-box h1,
+.form-box h2 {
+  color: var(--Verde-mato);
+  font-family: var(--ff-Montserrat);
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-3);
+  margin-bottom: 30px;
+}
+
+.form-box h2 {
+  margin-top: 30px;
+}
+
+/*----------- INPUT -----------*/
+.input {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 30px;
+  font-family: var(--ff-Montserrat);
+  font-weight: var(--weight-bold);
+  font-size: var(--fs-f8);
+  background: var(--gradiente-floresta);
+  color: var(--Branco);
+}
+
+.input::placeholder {
+  color: var(--Branco);
+}
+
+/*----------- CONTATO -----------*/
+.contact-line {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: 3px solid var(--Verde-lima);
+  border-radius: 30px;
+  font-family: var(--ff-Montserrat);
+  font-weight: var(--weight-regular);
+}
+
+/*----------- ÍCONE -----------*/
+.icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 480px) {
+  .form-box {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .form-box h1,
+  .form-box h2 {
+    font-size: var(--fs-4);
+  }
+
+  .input {
+    font-size: 1rem;
+  }
+
+  .contact-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .icon {
+    width: 18px;
+  }
+}
